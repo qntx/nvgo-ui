@@ -1,16 +1,67 @@
-# README
+# Wails + Svelte 5 Template
 
-## About
+Modern Wails template using Svelte 5, Tailwind CSS, and shadcn-svelte components.
 
-This is the official Wails Svelte-TS template.
+## Features
 
-## Live Development
+- Svelte 5 with TypeScript
+- Tailwind CSS for styling
+- shadcn-svelte components
+- Vite for frontend tooling
+- Go backend with Wails
 
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
+## Requirements
+
+- Go 1.21+
+- Node.js 18+
+- Wails CLI v2.7.0+
+
+## Quick Start
+
+```bash
+# Create new project
+wails init -n myapp -t https://github.com/qntx/wails-svelte-template
+
+# Install dependencies
+cd myapp/frontend
+npm install
+
+# Start development
+cd ..
+wails dev
+```
+
+## Development
+
+Add shadcn components:
+
+```bash
+npx shadcn-svelte@next add [component-name]
+```
 
 ## Building
 
-To build a redistributable, production mode package, use `wails build`.
+Build production binary:
+
+```bash
+wails build
+```
+
+## Project Structure
+
+```
+├── frontend/          # Svelte frontend
+│   ├── src/
+│   └── package.json
+├── app.go            # Backend logic
+└── main.go           # Entry point
+```
+
+## License
+
+MIT License
+
+## Support
+
+- GitHub Issues
+- [Wails Discord](https://discord.gg/wails)
